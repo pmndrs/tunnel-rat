@@ -1,6 +1,7 @@
 <center>
-    <img src="/logo.jpg" alt="Tunnel Rat">
+    <img src="/logo.jpg" alt="Tunnel Rat" height="600">
 </center>
+<bt />
 
 https://codesandbox.io/s/basic-demo-forked-kxq8g
 
