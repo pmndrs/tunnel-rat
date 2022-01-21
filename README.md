@@ -4,7 +4,7 @@
 <br />
 <br />
 
-A cross renderer portal that allows you to project from one place into another. Demo: https://codesandbox.io/s/basic-demo-forked-kxq8g
+A potentially cross renderer portal. It serves as a simple to means to project something from one place into another.  Demo: https://codesandbox.io/s/basic-demo-forked-kxq8g
 
 ```jsx
 import tunnel from 'tunnel-rat'
