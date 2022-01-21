@@ -14,7 +14,7 @@ export default function tunnel() {
   return {
     In: ({ children }: Props) => {
       const set = useStore((state) => state.set)
-      useLayoutEffect(() => void set({ current: children }))
+      useLayoutEffect(() => void set({ current: children }), [children])
       return null
     },
     Out: () => {
