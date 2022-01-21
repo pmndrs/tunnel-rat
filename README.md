@@ -1,7 +1,8 @@
-<center>
+<p align="center">
     <img src="/logo.jpg" alt="Tunnel Rat" height="600">
-</center>
-<bt />
+</p>
+<br />
+<br />
 
 https://codesandbox.io/s/basic-demo-forked-kxq8g
 
