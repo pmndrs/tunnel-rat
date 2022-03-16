@@ -22,7 +22,7 @@ export default function tunnel() {
     },
     Out: () => {
       const current = useStore((state) => state.current)
-      return current
+      return current as React.ReactElement | null
     },
   }
 }
