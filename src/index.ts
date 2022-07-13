@@ -5,24 +5,42 @@ type Props = { children: React.ReactNode }
 
 export default function tunnel() {
   const useStore = create<{
-    current: React.ReactNode | null
+    current: Array<React.ReactNode>
     set: SetState<{
-      current: React.ReactNode | null
+      current: Array<React.ReactNode>
       set: any
     }>
-  }>((set) => ({ current: null, set }))
+  }>((set) => ({ current: [], set }))
   return {
     In: ({ children }: Props) => {
       const set = useStore((state) => state.set)
+      
       useLayoutEffect(() => {
-        set({ current: children })
-        return () => void set({ current: null })
+        set(({ current }) => {
+          const clone = [...current]
+          clone.push(children)
+
+          return { current: clone }
+        })
+        
+        return () => {
+          set(({ current }) => {
+            const index = current.indexOf(children)
+
+            const clone = [...current]
+            clone.splice(index, 1)
+
+            return { current: clone }
+          })
+        }
       }, [children])
+
       return null
     },
     Out: () => {
       const current = useStore((state) => state.current)
-      return current as React.ReactElement | null
+      return current as Array<React.ReactNode>
     },
   }
 }
+
