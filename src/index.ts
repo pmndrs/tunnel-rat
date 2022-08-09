@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from 'react'
+import React, { useEffect } from 'react'
 import create, { SetState } from 'zustand'
 
 type Props = { children: React.ReactNode }
@@ -14,7 +14,7 @@ export default function tunnel() {
   return {
     In: ({ children }: Props) => {
       const set = useStore((state) => state.set)
-      useLayoutEffect(() => {
+      useEffect(() => {
         set({ current: children })
         return () => void set({ current: null })
       }, [children])
