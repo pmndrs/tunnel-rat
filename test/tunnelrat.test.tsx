@@ -40,5 +40,45 @@ describe('tunnelrat', () => {
     `)
   })
 
-  it.todo('can handle multiple children')
+  it('can handle multiple children', () => {
+    const t = tunnel()
+
+    const A = () => (
+      <ul>
+        <t.Out />
+      </ul>
+    )
+
+    const B = () => (
+      <div>
+        <t.In>
+          <li>One</li>
+        </t.In>
+        <t.In>
+          <li>Two</li>
+        </t.In>
+      </div>
+    )
+
+    const { container } = render(
+      <>
+        <A />
+        <B />
+      </>
+    )
+
+    expect(container).toMatchInlineSnapshot(`
+      <div>
+        <ul>
+          <li>
+            One
+          </li>
+          <li>
+            Two
+          </li>
+        </ul>
+        <div />
+      </div>
+    `)
+  })
 })
