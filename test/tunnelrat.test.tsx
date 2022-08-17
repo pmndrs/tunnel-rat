@@ -110,6 +110,7 @@ describe('tunnelrat', () => {
       <div>
         <Rat name="One" />
         <Rat name="Two" />
+        <Rat name="Three" />
       </div>
     )
 
@@ -129,32 +130,8 @@ describe('tunnelrat', () => {
           <li>
             Two
           </li>
-        </ul>
-        <div>
-          <div>
-            <button>
-              Toggle 
-              One
-            </button>
-          </div>
-          <div>
-            <button>
-              Toggle 
-              Two
-            </button>
-          </div>
-        </div>
-      </div>
-    `)
-
-    /* Remove the first child */
-    fireEvent.click(screen.getByText('Toggle One'))
-
-    expect(container).toMatchInlineSnapshot(`
-      <div>
-        <ul>
           <li>
-            Two
+            Three
           </li>
         </ul>
         <div>
@@ -170,13 +147,56 @@ describe('tunnelrat', () => {
               Two
             </button>
           </div>
+          <div>
+            <button>
+              Toggle 
+              Three
+            </button>
+          </div>
+        </div>
+      </div>
+    `)
+
+    /* Remove the middle rat */
+    fireEvent.click(screen.getByText('Toggle Two'))
+
+    expect(container).toMatchInlineSnapshot(`
+      <div>
+        <ul>
+          <li>
+            One
+          </li>
+          <li>
+            Three
+          </li>
+        </ul>
+        <div>
+          <div>
+            <button>
+              Toggle 
+              One
+            </button>
+          </div>
+          <div>
+            <button>
+              Toggle 
+              Two
+            </button>
+          </div>
+          <div>
+            <button>
+              Toggle 
+              Three
+            </button>
+          </div>
         </div>
       </div>
     `)
 
     /* Re-add it */
-    fireEvent.click(screen.getByText('Toggle One'))
+    fireEvent.click(screen.getByText('Toggle Two'))
 
+    /* The "Two" rat gets re-added, and at the top of the list. */
     expect(container).toMatchInlineSnapshot(`
       <div>
         <ul>
@@ -186,6 +206,9 @@ describe('tunnelrat', () => {
           <li>
             Two
           </li>
+          <li>
+            Three
+          </li>
         </ul>
         <div>
           <div>
@@ -198,6 +221,12 @@ describe('tunnelrat', () => {
             <button>
               Toggle 
               Two
+            </button>
+          </div>
+          <div>
+            <button>
+              Toggle 
+              Three
             </button>
           </div>
         </div>
