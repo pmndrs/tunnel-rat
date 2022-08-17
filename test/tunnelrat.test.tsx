@@ -7,13 +7,13 @@ describe('tunnelrat', () => {
   it('transports the children of In into Out', () => {
     const t = tunnel()
 
-    const A = () => (
+    const Outlet = () => (
       <ul>
         <t.Out />
       </ul>
     )
 
-    const B = () => (
+    const Inlets = () => (
       <div>
         <t.In>
           <li>One</li>
@@ -23,8 +23,8 @@ describe('tunnelrat', () => {
 
     const { container } = render(
       <>
-        <A />
-        <B />
+        <Outlet />
+        <Inlets />
       </>
     )
 
