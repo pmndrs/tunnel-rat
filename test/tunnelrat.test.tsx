@@ -8,15 +8,17 @@ describe('tunnelrat', () => {
     const t = tunnel()
 
     const A = () => (
-      <ul>
+      <ul id="a">
         <t.Out />
       </ul>
     )
 
     const B = () => (
-      <t.In>
-        <li>One</li>
-      </t.In>
+      <div id="b">
+        <t.In>
+          <li>One</li>
+        </t.In>
+      </div>
     )
 
     const { container } = render(
@@ -28,11 +30,16 @@ describe('tunnelrat', () => {
 
     expect(container).toMatchInlineSnapshot(`
       <div>
-        <ul>
+        <ul
+          id="a"
+        >
           <li>
             One
           </li>
         </ul>
+        <div
+          id="b"
+        />
       </div>
     `)
   })
