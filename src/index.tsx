@@ -3,10 +3,8 @@ import create, { SetState } from 'zustand'
 
 type Props = { children: React.ReactNode }
 
-type Rats = Array<React.ReactNode>
-
 type State = {
-  current: Rats
+  current: Array<React.ReactNode>
   version: number
   set: SetState<State>
 }
