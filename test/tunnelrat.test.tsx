@@ -43,13 +43,13 @@ describe('tunnelrat', () => {
   it('can handle multiple children', () => {
     const t = tunnel()
 
-    const A = () => (
+    const Outlet = () => (
       <ul>
         <t.Out />
       </ul>
     )
 
-    const B = () => (
+    const Inlets = () => (
       <div>
         <t.In>
           <li>One</li>
@@ -62,8 +62,8 @@ describe('tunnelrat', () => {
 
     const { container } = render(
       <>
-        <A />
-        <B />
+        <Outlet />
+        <Inlets />
       </>
     )
 
@@ -100,13 +100,13 @@ describe('tunnelrat', () => {
       )
     }
 
-    const A = () => (
+    const Outlet = () => (
       <ul>
         <t.Out />
       </ul>
     )
 
-    const B = () => (
+    const Inlets = () => (
       <div>
         <Rat name="One" />
         <Rat name="Two" />
@@ -116,8 +116,8 @@ describe('tunnelrat', () => {
 
     const { container } = render(
       <>
-        <A />
-        <B />
+        <Outlet />
+        <Inlets />
       </>
     )
 
