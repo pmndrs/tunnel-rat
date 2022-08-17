@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom'
-import { act, render, fireEvent, screen } from '@testing-library/react'
-import React, { ReactNode } from 'react'
+import { fireEvent, render, screen } from '@testing-library/react'
+import React from 'react'
 import tunnel from '../src'
 
 describe('tunnelrat', () => {
