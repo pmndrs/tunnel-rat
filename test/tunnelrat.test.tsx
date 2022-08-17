@@ -4,17 +4,17 @@ import React from 'react'
 import tunnel from '../src'
 
 describe('tunnelrat', () => {
-  it('Transports the children of In into Out', () => {
+  it('transports the children of In into Out', () => {
     const t = tunnel()
 
     const A = () => (
-      <ul id="a">
+      <ul>
         <t.Out />
       </ul>
     )
 
     const B = () => (
-      <div id="b">
+      <div>
         <t.In>
           <li>One</li>
         </t.In>
@@ -30,17 +30,15 @@ describe('tunnelrat', () => {
 
     expect(container).toMatchInlineSnapshot(`
       <div>
-        <ul
-          id="a"
-        >
+        <ul>
           <li>
             One
           </li>
         </ul>
-        <div
-          id="b"
-        />
+        <div />
       </div>
     `)
   })
+
+  it.todo('can handle multiple children')
 })
