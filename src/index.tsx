@@ -5,16 +5,14 @@ type Props = { children: React.ReactNode }
 
 type Rats = Array<React.ReactNode>
 
+type State = {
+  current: Rats
+  version: number
+  set: SetState<State>
+}
+
 export default function tunnel() {
-  const useStore = create<{
-    current: Rats
-    version: number
-    set: SetState<{
-      current: Rats
-      version: number
-      set: any
-    }>
-  }>((set) => ({
+  const useStore = create<State>((set) => ({
     current: new Array<ReactNode>(),
     version: 0,
     set,
