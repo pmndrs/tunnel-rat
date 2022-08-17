@@ -181,10 +181,10 @@ describe('tunnelrat', () => {
       <div>
         <ul>
           <li>
-            Two
+            One
           </li>
           <li>
-            One
+            Two
           </li>
         </ul>
         <div>
