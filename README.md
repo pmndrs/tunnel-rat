@@ -2,6 +2,10 @@
     <img src="https://user-images.githubusercontent.com/1061/185432665-ddfe409a-d399-4059-bd2f-bfefc2a97db1.png" alt="Tunnel Rat" height="600">
 </p>
 
+[![Version](https://img.shields.io/npm/v/tunnel-rat?style=for-the-badge)](https://www.npmjs.com/package/tunnel-rat)
+[![Downloads](https://img.shields.io/npm/dt/tunnel-rat.svg?style=for-the-badge)](https://www.npmjs.com/package/tunnel-rat)
+[![Bundle Size](https://img.shields.io/bundlephobia/min/tunnel-rat?label=bundle%20size&style=for-the-badge)](https://bundlephobia.com/result?p=tunnel-rat)
+
 ## Tunnel Rat
 
 - Beams React elements **from one place to another**!
