@@ -1,6 +1,8 @@
 <p align="center">
-    <img src="/logo.jpg" alt="Tunnel Rat" height="600">
+    <img src="https://user-images.githubusercontent.com/1061/185432665-ddfe409a-d399-4059-bd2f-bfefc2a97db1.png" alt="Tunnel Rat" height="600">
 </p>
+
+## Tunnel Rat 
 
 - Beams React elements **from one place to another**!
 - Works across **separate renderers**!
