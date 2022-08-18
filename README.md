@@ -18,13 +18,31 @@
 - https://codesandbox.io/s/basic-demo-forked-kxq8g
 - https://codesandbox.io/s/tunnel-rat-demo-ceupre
 
-## Basic Usage
+## Usage
 
-- Create a tunnel!
-- Use the tunnel's `In` component to send elements into the tunnel!
-- Use the tunnel's `Out` component to render them!
+Create a tunnel:
 
-### Example
+```tsx
+import tunnel from 'tunnel-rat'
+const t = tunnel()
+```
+
+Use the tunnel's `In` component to send one or more elements into the tunnel:
+
+```tsx
+<t.In>
+  <h1>Very cool!</h1>
+  <p>These will appear somewhere else!</p>
+</t.In>
+```
+
+Somewhere else, use the tunnel's `Out` component to render them:
+
+```tsx
+<t.Out />
+```
+
+## Examples
 
 This example describes a simple React app that has both a HTML UI as well as a @react-three/fiber 3D scene. Each of these is rendered using separate React renderers, which traditionally makes emitting HTML from within the Canvas a bit of a pain; but thanks to tunnel-rat, this is now super easy!
 
