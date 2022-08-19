@@ -60,6 +60,10 @@ const App = () => (
       <ui.Out />
     </div>
 
+    {/* Here we're entering the part of the app that is driven by
+    @react-three/fiber, where all children of the <Canvas> component
+    are rendered by an entirely separate React renderer, which would
+    typically not allow the use of HTML tags. */}
     <Canvas>
       {/* Let's send something into the tunnel! */}
       <ui.In>
