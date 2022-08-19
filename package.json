@@ -82,6 +82,6 @@
   },
   "homepage": "https://github.com/pmndrs/tunnel-rat#readme",
   "dependencies": {
-    "zustand": "^4.0.0"
+    "zustand": "^4.1.0"
   }
 }
