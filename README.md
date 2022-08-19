@@ -8,9 +8,8 @@
 
 ## Tunnel Rat
 
-- Beams React elements **from one place to another**!
-- Works across **separate renderers**!
-- Yes, it really does! Use it to easily **render HTML elements from within your @react-three/fiber application**!
+- Digs tunnels for React elements to **go in** and **appear somewhere else**!
+- Works across **separate renderers** &ndash; use it to easily **render HTML elements from within your @react-three/fiber application**!
 - Squeak! 🐀
 
 ## Examples & Sandboxes
