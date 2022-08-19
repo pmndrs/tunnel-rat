@@ -1,12 +1,12 @@
 import React, { ReactNode, useLayoutEffect } from 'react'
-import create, { SetState } from 'zustand'
+import create, { StoreApi } from 'zustand'
 
 type Props = { children: React.ReactNode }
 
 type State = {
   current: Array<React.ReactNode>
   version: number
-  set: SetState<State>
+  set: StoreApi<State>['setState']
 }
 
 export default function tunnel() {
