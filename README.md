@@ -4,12 +4,12 @@
 <br />
 <br />
 
-A potential cross renderer portal. It serves as a simple means to project something from one place to another.  Demo: https://codesandbox.io/s/basic-demo-forked-kxq8g
+A potential cross renderer portal. It serves as a simple means to project something from one place to another. Demo: https://codesandbox.io/s/basic-demo-forked-kxq8g
 
 ```jsx
 import tunnel from 'tunnel-rat'
 
-const t = tunnel()
+const t = tunnel('my-tunnel')
 // <t.In>{content}</t.In>
 // <t.Out />
 ```
