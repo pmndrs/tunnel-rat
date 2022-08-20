@@ -5,7 +5,7 @@ import tunnel from '../src'
 
 describe('tunnelrat', () => {
   it('transports the children of In into Out', () => {
-    const t = tunnel()
+    const t = tunnel('test-1')
 
     const Outlet = () => (
       <ul>
@@ -41,7 +41,7 @@ describe('tunnelrat', () => {
   })
 
   it('can handle multiple children', () => {
-    const t = tunnel()
+    const t = tunnel('test-2')
 
     const Outlet = () => (
       <ul>
@@ -83,7 +83,7 @@ describe('tunnelrat', () => {
   })
 
   it('retains the expected order of multiple children after un- and remounts', () => {
-    const t = tunnel()
+    const t = tunnel('test-3')
 
     const Rat = ({ name }: { name: string }) => {
       const [visible, setVisible] = React.useState(true)
