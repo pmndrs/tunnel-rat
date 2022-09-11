@@ -11,7 +11,8 @@
     "postbuild": "tsc --emitDeclarationOnly",
     "prepublishOnly": "npm run build",
     "test": "jest",
-    "ci": "yarn build && yarn test"
+    "ci": "yarn build && yarn test",
+    "release": "yarn ci && yarn changeset publish"
   },
   "husky": {
     "hooks": {
