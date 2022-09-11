@@ -1,6 +1,6 @@
 {
   "name": "tunnel-rat",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "non gratum anus rodentum",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
