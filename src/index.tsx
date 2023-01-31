@@ -1,5 +1,5 @@
 import React, { ReactNode, useLayoutEffect } from 'react'
-import create, { StoreApi } from 'zustand'
+import { create, StoreApi } from 'zustand'
 
 type Props = { children: React.ReactNode }
 
