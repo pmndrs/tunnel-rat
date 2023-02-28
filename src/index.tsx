@@ -1,5 +1,6 @@
-import React, { ReactNode, useLayoutEffect } from 'react'
+import React, { ReactNode } from 'react'
 import create, { StoreApi } from 'zustand'
+import { useIsomorphicLayoutEffect } from './utils'
 
 type Props = { children: React.ReactNode }
 
@@ -25,7 +26,7 @@ export default function tunnel() {
       This will cause all existing rats to re-render (just like if the Out component
       were mapping items to a list.) The re-rendering will cause the final 
       order of rendered components to match what the user is expecting. */
-      useLayoutEffect(() => {
+      useIsomorphicLayoutEffect(() => {
         set((state) => ({
           version: state.version + 1,
         }))
@@ -33,7 +34,7 @@ export default function tunnel() {
 
       /* Any time the children _or_ the store's version number change, insert
       the specified React children into the list of rats. */
-      useLayoutEffect(() => {
+      useIsomorphicLayoutEffect(() => {
         set(({ current }) => ({
           current: [...current, children],
         }))
