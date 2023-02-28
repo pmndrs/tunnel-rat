@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import create, { StoreApi } from 'zustand'
+import { create, StoreApi } from 'zustand'
 import { useIsomorphicLayoutEffect } from './utils'
 
 type Props = { children: React.ReactNode }
