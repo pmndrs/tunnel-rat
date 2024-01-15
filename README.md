@@ -66,7 +66,7 @@ const App = () => (
     <Canvas>
       {/* Let's send something into the tunnel! */}
       <ui.In>
-        <p>Hi, I'm a cube!</p>
+        <p key="first">Hi, I'm a cube!</p>
       </ui.In>
 
       <mesh>
@@ -77,7 +77,7 @@ const App = () => (
       {/* You can send multiple things through the tunnel, and
       they will all show up in the order that you've defined them in! */}
       <ui.In>
-        <p>And I'm a sphere!</p>
+        <p key="second">And I'm a sphere!</p>
       </ui.In>
 
       <mesh>
@@ -116,4 +116,19 @@ const App = () => (
     </Canvas>
   </div>
 )
+```
+
+## Gotchas
+
+If you have multiple in's React may loose track of object order and even mismatch objects, especially if the root elements are of the same type. Make sure you use keys, always treat multiple in's as a list!
+
+```jsx
+<ui.In>
+  <p key="foo">foo</p>
+</ui.In>
+...
+
+<ui.In>
+  <p key="bar">bar</p>
+</ui.In>
 ```
